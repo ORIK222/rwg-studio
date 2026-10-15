@@ -248,3 +248,12 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
   .emblem .orbit { animation: none; }
   * { transition: none !important; }
 }
+
+/* Перемикач мов */
+.nav { margin-inline: auto; }
+.lang { display: flex; margin-left: auto; border: 1px solid var(--line); font: 500 12px/1 var(--mono); letter-spacing: .1em; }
+.lang a { padding: 9px 10px; text-decoration: none; color: var(--muted); transition: color .2s, background .2s; }
+.lang a:hover { color: var(--ink); }
+.lang a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+@media (max-width: 920px) { .top .wrap { gap: 12px; } }
+@media (max-width: 420px) { .top .btn.primary { padding: 10px 12px; font-size: 13px; } .brand b { display: none; } }

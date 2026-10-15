@@ -80,6 +80,11 @@
     counters.forEach(b => cio.observe(b));
   }
 
+  // Перемикач мов: запам'ятовуємо вибір, щоб не перекидало автоматично
+  document.querySelectorAll('.lang a').forEach(a => a.addEventListener('click', () => {
+    try { localStorage.setItem('rwg-lang', a.getAttribute('lang')); } catch (e) {}
+  }));
+
   // Шапка стискається після скролу
   const top = document.querySelector('.top');
   const onScroll = () => top && top.classList.toggle('compact', scrollY > 40);
